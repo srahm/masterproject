@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pi="http://xmlns.jcp.org/jsf/passthrough">
+      
+    <h:head>
+        <h:outputStylesheet library="css" name="newnewcss.css"/>
+        <title>Image Upload</title>
+    </h:head>
+    
+    <h:body>
+           <div id="header">
+  
+	<div class="siteHeader">
+    	<h1 class="siteHeaderBar">
+    	<div class="imageIndent">
+    	</div>
+    	<h:graphicImage value="/oliveBranch1.png" width="100" id="MMP-logo"/>
+    	</h1>
+      
+    	<ul id="pagNaviHeader" class="horizBar" style="list-style-type:none" width="100">
+            <li><a href="admin.xhtml">Home</a></li>
+
+            <li><a href="displayimage1.xhtml">Recently Posted</a></li>
+            <li><a href="image.xhtml">Upload Image</a></li>
+            <li><a>About Us</a></li>
+
+		</ul>
+		
+		
+
+ 	</div>
+    
+    
+  </div>
+        <div class="wrap">
+	<div id="innerBackground">
+				
+		<div id="content">
+				
+			<a ></a>	
+		
+			<div class="wordborder" align="center">
+                            <h3>Upload your image below</h3>
+		</div>
+		
+		
+	
+
+
+
+		
+		
+		
+		
+                    <div  align="center" class="RegBox input " >
+        
+        <h:form enctype="multipart/form-data" > 
+            <h:panelGrid >
+          <h:inputText  id="email" label="Email Address"
+                             required="true" styleClass="input2"
+                             pi:placeholder="username@example.com"
+                             value="#{uploadImage.email}"> 
+              
+                   
+                    <f:validator validatorId="emailValidator"/>
+                
+                </h:inputText>
+            
+             <h:inputTextarea rows="5"  id="itemDesc" label="Item Desc"
+                             required="true" styleClass="input2"
+                             pi:placeholder="Type in a description"
+                             value="#{uploadImage.itemDesc}"/> 
+             
+               <h:inputText  id="price" label="Price"
+                             required="true" styleClass="input2"
+                             pi:placeholder="$10.00"
+                             value="#{uploadImage.price}"/> 
+             
+            <p:messages showDetail="true"/> 
+           
+                
+                
+                
+            <p:fileUpload  required="true" value="#{uploadImage.file}" mode="simple" allowTypes="/(\.|\/)(gif|jpe?g|png)$/" /> 
+               
+                  
+                      
+                 
+                                     
+                               
+                               
+           
+           
+             <h:commandButton id="register"  value="Submit" class="button"
+                                 action="#{uploadImage.upload()}"  /> 
+          
+          
+            </h:panelGrid>
+            
+            
+            
+            
+          
+           
+        </h:form> 
+  </div>
+                  
+		
+			
+	  		
+			
+
+		
+		 
+      
+
+
+                
+
+</div>
+
+
+
+
+</div>
+             
+                
+         
+            
+      
+            <br>
+                </br>
+                <br>
+                </br>
+        
+
+        <br>
+        </br>
+            </div>
+       
+           
+    </h:body>
+  
+        <div class= "footer">
+	<p1>Created by: Sammy A. </p1>
+	
+	
+	
+ 
+</div>
+</html>

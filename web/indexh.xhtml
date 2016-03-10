@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pi="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>MyMarketplace</title>
+        <h:outputStylesheet library="css" name="newnewcss.css"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        
+    </h:head>
+    <h:body>
+        <div id="header">
+  
+	<div class="siteHeader">
+    	<h1 class="siteHeaderBar">
+    	<div class="imageIndent">
+    	</div>
+    	<h:graphicImage value="/oliveBranch1.png" width="100" id="MMP-logo"/>
+    	</h1>
+     
+    	
+		
+		
+
+ 	</div>
+    
+    
+  </div>
+  
+  
+	  <pi:spacer height="5"></pi:spacer>
+	<div class="wrap">
+	<div id="innerBackground">
+				
+		<div id="content">
+				
+			<a ><h:graphicImage value="marketPlace.jpg" width="650" class="alignleft imageBorder" alt="marketPlace" /></a>	
+		
+			<div align="center">
+                            <h1><b>Welcome to MyMarketPlace</b></h1>
+			<p> Thanks for choosing MyMarketPlace. At the marketplace you can post any items you'd like to sell. Simply create an account and begin posting, it's that easy. Good luck!  </p>
+		</div>
+		<br>
+		
+	
+
+
+
+
+		
+		
+		
+		
+	<div align="center" class="loginBox input">
+		
+	<h:form>
+        
+            <h:outputLabel for="email" />
+        
+                <h:inputText  id="email" label="Email Address"
+                             required="true" styleClass="loginBox"
+                             p:placeholder="username@example.com"
+                             value="#{lgbean.email}" />         
+        <h:message for="email" style="color:red;" />
+        
+        <h:outputLabel for="password" />
+         
+        
+        <h:inputSecret id="password" value="#{lgbean.password}" styleClass="loginBox"
+                             required="true" p:placeholder="Password"></h:inputSecret>
+        
+        <h:message for="password" style="color:red;" />
+        
+         
+        <h:commandButton action="#{lgbean.validateEmailPassword}"
+            value="Login"></h:commandButton>
+         <h:button id="register"  class= "button" value=" Register " outcome="registerJsp.xhtml"/>
+        
+
+    </h:form>
+           
+	</div>
+		
+    	
+			
+			
+			
+		<div class=" ColLayout picLayout layout2">
+
+			<h:graphicImage value="bookimg2.jpg" class="alignleft imageBorder"  style= "width 308px; height:200px;" alt="books" />
+		
+		</div>
+		
+		
+		
+		<div class=" ColLayout layout2">
+
+			<h:graphicImage value="deviceimg2.jpg" class="alignleft imageBorder" style= "width 308px; height:200px;" alt="electronics" />	
+		
+		
+		</div>
+		<div class="ColLayout layout2">
+
+		<h:graphicImage value="clothes@.jpg" class="alignleft imageBorder"  style= "width 308px; height:200px;" alt="clothes" />	
+		</div>
+		
+      
+
+
+                </br>
+
+</div>
+
+
+
+
+</div>
+        </div>  </h:body>
+    <div align="center">
+    <div class= "footer">
+	<p1>Created by: Sammy A. </p1>
+    </div>	
+		
+	
+ 
+</div>
+
+</html>
+

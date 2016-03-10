@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pi="http://xmlns.jcp.org/jsf/passthrough">
+      
+    <h:head>
+        <h:outputStylesheet library="css" name="newnewcss.css"/>
+        <h:outputStylesheet library="css" name="primefaces.css"/>
+        <title>Image Upload</title>
+    </h:head>
+    
+    <h:body>
+           <div id="header">
+  
+	<div class="siteHeader">
+    	<h1 class="siteHeaderBar">
+    	<div class="imageIndent">
+    	</div>
+    	<h:graphicImage value="/oliveBranch1.png" width="100" id="MMP-logo"/>
+    	</h1>
+      
+    	<ul id="pagNaviHeader" class="horizBar" style="list-style-type:none" width="100">
+            <li><a href="admin.xhtml">Home</a></li>
+
+            <li><a href = "displayimage1.xhtml">Recently Posted</a></li>
+            <li><a href="image.xhtml">Upload Image</a></li>
+            
+            <li><a>About Us</a></li>
+
+		</ul>
+		
+		
+
+ 	</div>
+    
+    
+  </div>
+        <div class="wrap">
+	<div id="innerBackground">
+				
+		<div id="content">
+				
+		
+		
+	
+                       <div class="wordborder" align="center">
+                            <h3>Recently Posted Items</h3>
+		</div>
+
+
+		
+		
+		
+		
+              <div class="layout">
+                                  
+        <h:form enctype="multipart/form-data">
+            <p:spacer height="10"></p:spacer>
+            <p:dataTable value="#{ImageBean.allImage}" var="item" paginator="true" rows="5"
+                         paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                          widgetVar="4" style="width: auto;" >           
+            
+              
+                
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Email" />
+                    </f:facet>
+                    
+              <h:outputLink value="mailto:#{item.email}">
+                  <div align="center">  <h:outputText value="#{item.email}" /></div>
+                </h:outputLink>
+                </p:column>
+                
+      
+                
+                  <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Item Desc" />
+                    </f:facet>
+                      <div align="center"> <h:outputText  value="#{item.itemDesc}"/></div>
+                </p:column>
+                
+                  <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Price" />
+                    </f:facet>
+                      <div align="center"> <h:outputText value="#{item.price}"/></div>
+                </p:column>
+                
+                
+                
+                
+                
+                
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Image" />
+                    </f:facet>
+                    <h:outputLink value="DisplayImage?Image_id=#{item.imageID}" target="_blank" >
+                        <div align="center">    <h:graphicImage value="DisplayImage?Image_id=#{item.imageID}" width="auto" height="auto"></h:graphicImage> </div>
+                    </h:outputLink>
+ 
+                </p:column>
+            </p:dataTable>
+
+            
+        </h:form>
+      
+                  
+		
+			
+              </div>	  		
+			
+
+		
+		 
+      
+
+
+                
+
+</div>
+
+
+
+
+</div>
+             
+                
+         
+            
+      
+            
+        
+
+        <br>
+        </br>
+            </div>
+       
+           
+    </h:body>
+  
+        <div class= "footer">
+	<p1>Created by: Sammy A. </p1>
+	
+	
+	
+ 
+</div>
+</html>
